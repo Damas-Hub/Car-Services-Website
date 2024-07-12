@@ -1,0 +1,284 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    
+    #gallery {
+        justify-content: space-around;
+    }
+
+    .card {
+        width: calc(50% - 10px);  
+    }
+}
+
+@media (max-width: 480px) {
+     
+    .card {
+        width: 100%; 
+    }
+}
+
+.nav-active {
+    display: flex;
+}
+
+/* Gallery Styles */
+h1 {
+    color: red;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: calc(33.333% - 20px);  
+    box-sizing: border-box;
+    text-align: center;
+    padding: 10px;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/*  animation styles  */
+#img1 {
+    animation: rotate 5s infinite;
+}
+
+#img2 {
+    animation: scaleUp 5s infinite;
+}
+
+#img3 {
+    animation: fadeIn 5s infinite;
+}
+
+#img4 {
+    animation: slideIn 5s infinite;
+}
+
+#img5 {
+    animation: flip 5s infinite;
+}
+
+#img6 {
+    animation: bounce 5s infinite;
+}
+
+/* Car Cards Section */
+#our-cars {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+#our-cars h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.car-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.car-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(33.333% - 20px); /* Three cards per row with some space between */
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.car-card:hover {
+    transform: translateY(-5px);
+}
+
+.car-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.car-card h3 {
+    margin: 10px 0;
+    color: #333;
+}
+
+.car-card p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.purchase-btn {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.purchase-btn:hover {
+    background-color: #e65500;
+}
+
+/* Responsive Design for Car Cards */
+@media (max-width: 768px) {
+    .car-card {
+        width: calc(50% - 10px); /* Two cards per row with some space between */
+    }
+}
+
+@media (max-width: 480px) {
+    .car-card {
+        width: 100%; /* One card per row */
+    }
+}
+
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.5);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes flip {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
