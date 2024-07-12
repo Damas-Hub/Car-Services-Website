@@ -2,7 +2,7 @@ Car Services Website
 Welcome to the Car Services Website project! This repository is part of my lectures for aspiring web developers, providing practical experience with HTML, CSS, and JavaScript.
 
 Overview
-In this project, my students will learn how to create a functional and visually appealing website from scratch. This hands-on experience aims to provide a solid foundation in web development, enabling students to build their own projects in the future.
+In this project, students will learn how to create a functional and visually appealing website from scratch. This hands-on experience aims to provide a solid foundation in web development, enabling students to build their own projects in the future.
 
 What You'll Learn
 HTML: Structuring web pages with semantic elements.
